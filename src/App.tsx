@@ -1,3 +1,4 @@
+import React, {useState} from 'react'
 import Greet from "./components/Greet"
 import Person from "./components/Person"
 import PersonList from "./components/PersonList"
@@ -5,8 +6,10 @@ import Status from "./components/Status"
 import Heading from "./components/Heading"
 import Oscar from "./components/Oscar"
 import Profile from "./components/Profile"
+import LoginBtn from './components/LoginBtn'
 
 function App() {
+  const [login, setLogin] = useState(false)
 
   const personName = {
     first : 'Bruce',
@@ -27,6 +30,10 @@ function App() {
       last : 'Diana'
     },
   ]
+
+  const handleClick = () => {
+    setLogin(!login)
+  }
 
   return (
     <div className="App text-center">
@@ -53,9 +60,14 @@ function App() {
         name="Hussain"
         age={22}
         gender="male"/>
+      <br />
       <Profile
         name="Sara"
         age={20}/>
+      <h1 className=" font-extrabold">Event prop</h1>
+      <LoginBtn
+        handleClick={handleClick}
+        isLogin={login}/>
     </div>
   )
 }
