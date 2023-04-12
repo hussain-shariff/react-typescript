@@ -4,6 +4,7 @@ import PersonList from "./components/PersonList"
 import Status from "./components/Status"
 import Heading from "./components/Heading"
 import Oscar from "./components/Oscar"
+import Profile from "./components/Profile"
 
 function App() {
 
@@ -47,6 +48,14 @@ function App() {
       <Oscar>
         <Heading>Oscar goes to Leonardo di caprio</Heading>
       </Oscar>
+      <h1 className=" font-extrabold">Optional prop</h1>
+      <Profile
+        name="Hussain"
+        age={22}
+        gender="male"/>
+      <Profile
+        name="Sara"
+        age={20}/>
     </div>
   )
 }

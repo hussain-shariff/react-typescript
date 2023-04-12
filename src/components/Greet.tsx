@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 
 type greetProps = {
   name : String,
-  age : number
+  age ?: number
 }
 
 function Greet(props : greetProps) {
