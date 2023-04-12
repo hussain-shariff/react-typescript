@@ -1,9 +1,11 @@
+import Greet from "./components/Greet"
 
 function App() {
 
   return (
     <div className="App">
-      <h1 className="text-4xl"> hello</h1>
+      <Greet
+        name = "Hussain"/>
     </div>
   )
 }
