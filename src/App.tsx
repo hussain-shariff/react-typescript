@@ -2,6 +2,8 @@ import Greet from "./components/Greet"
 import Person from "./components/Person"
 import PersonList from "./components/PersonList"
 import Status from "./components/Status"
+import Heading from "./components/Heading"
+import Oscar from "./components/Oscar"
 
 function App() {
 
@@ -40,6 +42,11 @@ function App() {
       <Status
         message="loading"/>
       <h1 className=" font-extrabold">Children props</h1>
+      <Heading>Placeholder text</Heading>
+      <h1 className=" font-extrabold">React Node prop</h1>
+      <Oscar>
+        <Heading>Oscar goes to Leonardo di caprio</Heading>
+      </Oscar>
     </div>
   )
 }
