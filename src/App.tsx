@@ -5,7 +5,8 @@ function App() {
   return (
     <div className="App">
       <Greet
-        name = "Hussain"/>
+        name = "Hussain"
+        age={22}/>
     </div>
   )
 }
