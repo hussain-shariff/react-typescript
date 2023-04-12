@@ -1,5 +1,6 @@
 import Greet from "./components/Greet"
 import Person from "./components/Person"
+import PersonList from "./components/PersonList"
 
 function App() {
 
@@ -8,6 +9,21 @@ function App() {
     last : 'Wayne'
   }
 
+  const personNameList = [
+    {
+      first : 'Bruce',
+      last : 'Wayne'
+    },
+    {
+      first : 'Clark',
+      last : 'Klent'
+    },
+    {
+      first : 'Princess',
+      last : 'Diana'
+    },
+  ]
+
   return (
     <div className="App text-center">
       <Greet
@@ -15,6 +31,8 @@ function App() {
         age={22}/>
       <Person
         name={personName}/>
+      <PersonList
+        names={personNameList}/>
     </div>
   )
 }
