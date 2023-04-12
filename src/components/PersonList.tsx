@@ -12,7 +12,7 @@ function PersonList(props : PersonListProps) {
   return (
     <div>
         {props.names.map(name=>(
-            <li>{name.first} {name.last}</li>
+            <h1>{name.first} {name.last}</h1>
         ))}
     </div>
   )
