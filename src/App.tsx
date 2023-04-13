@@ -36,7 +36,7 @@ function App() {
   }
 
   return (
-    <div className="App text-center">
+    <div className="App text-center bg-gray-500 pt-10 min-h-screen">
       <Greet
         name = "Hussain"
         age={22}/>
