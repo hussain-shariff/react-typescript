@@ -7,6 +7,7 @@ import Heading from "./components/Heading"
 import Oscar from "./components/Oscar"
 import Profile from "./components/Profile"
 import LoginBtn from './components/LoginBtn'
+import Input from './components/Input'
 
 function App() {
   const [login, setLogin] = useState(false)
@@ -35,9 +36,13 @@ function App() {
     console.log(e, id); 
     setLogin(!login)
   }
+  
+  const handleChange = (e : React.ChangeEvent<HTMLInputElement>) => {
+    console.log(e.target.value); 
+  }
 
   return (
-    <div className="App text-center bg-gray-500 pt-10 min-h-screen">
+    <div className="App text-center bg-gray-500 pt-10 min-h-screen py-5">
       <Greet
         name = "Hussain"
         age={22}/>
@@ -69,6 +74,10 @@ function App() {
       <LoginBtn
         handleClick={handleClick}
         isLogin={login}/>
+      <h1 className=" font-extrabold">Onchange Event prop</h1>
+      <Input
+        value='hello world'
+        handleChange={handleChange}/>
     </div>
   )
 }
