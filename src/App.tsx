@@ -31,7 +31,8 @@ function App() {
     },
   ]
 
-  const handleClick = () => {
+  const handleClick = (e : React.MouseEvent<HTMLButtonElement, MouseEvent>, id: number) => {
+    console.log(e, id); 
     setLogin(!login)
   }
 

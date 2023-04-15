@@ -11,8 +11,8 @@ function PersonList(props : PersonListProps) {
     
   return (
     <div>
-        {props.names.map(name=>(
-            <h1>{name.first} {name.last}</h1>
+        {props.names.map((name, idx)=>(
+            <h1 key={idx}>{name.first} {name.last}</h1>
         ))}
     </div>
   )
