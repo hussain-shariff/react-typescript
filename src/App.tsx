@@ -8,6 +8,7 @@ import Oscar from "./components/Oscar"
 import Profile from "./components/Profile"
 import LoginBtn from './components/LoginBtn'
 import Input from './components/Input'
+import User from './components/User'
 
 function App() {
   const [login, setLogin] = useState(false)
@@ -15,6 +16,11 @@ function App() {
   const personName = {
     first : 'Bruce',
     last : 'Wayne'
+  }
+  
+  const user = {
+    name : 'Bruce',
+    email : 'Wayne.com'
   }
 
   const personNameList = [
@@ -74,6 +80,9 @@ function App() {
       <LoginBtn
         handleClick={handleClick}
         isLogin={login}/>
+      <User
+        data={user}
+        isLogin = {login}/>
       <h1 className=" font-extrabold">Onchange Event prop</h1>
       <Input
         value='hello world'
